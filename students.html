@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои ученики — Python Обучение</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+        }
+
+        .bg-circles {
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none; z-index: 0;
+        }
+        .bg-circles .circle {
+            position: absolute; border-radius: 50%;
+            background: rgba(255,255,255,0.03);
+            animation: float 20s infinite ease-in-out;
+        }
+        .bg-circles .circle:nth-child(1) { width: 400px; height: 400px; top: -100px; left: -100px; }
+        .bg-circles .circle:nth-child(2) { width: 300px; height: 300px; bottom: -50px; right: -50px; animation-delay: -5s; }
+        .bg-circles .circle:nth-child(3) { width: 200px; height: 200px; top: 50%; left: 50%; animation-delay: -10s; }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -30px) scale(1.1); }
+            50% { transform: translate(-20px, 20px) scale(0.95); }
+            75% { transform: translate(15px, 15px) scale(1.05); }
+        }
+
+        header {
+            position: relative; z-index: 1;
+            text-align: center; padding: 40px 20px 20px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 24px;
+        }
+        .back-link:hover {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+        }
+
+        .page-icon { font-size: 2.5rem; display: block; margin-bottom: 12px; }
+
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-subtitle {
+            margin-top: 8px;
+            color: rgba(255,255,255,0.5);
+            font-size: 1rem;
+        }
+
+        /* Список тем */
+        .topics-container {
+            position: relative; z-index: 1;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px 60px;
+        }
+
+        .topic-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 12px;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .topic-item:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(0, 210, 255, 0.3);
+            transform: translateX(8px);
+            box-shadow: 0 8px 30px rgba(0, 210, 255, 0.1);
+        }
+
+        .topic-number {
+            flex-shrink: 0;
+            width: 40px; height: 40px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .topic-info { flex: 1; }
+
+        .topic-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .topic-desc {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .topic-arrow {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .topic-item:hover .topic-arrow {
+            color: #00d2ff;
+            transform: translateX(4px);
+        }
+
+        /* Разделитель секций */
+        .section-divider {
+            text-align: center;
+            margin: 30px 0 20px;
+            color: rgba(255,255,255,0.3);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .page-title { font-size: 1.7rem; }
+            .topic-item { padding: 16px 18px; gap: 12px; }
+            .topic-number { width: 34px; height: 34px; font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-circles">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <header>
+        <a href="index.html" class="back-link">← Назад</a>
+        <span class="page-icon">👨‍🎓</span>
+        <h1 class="page-title">Мои ученики</h1>
+        <p class="page-subtitle">Индивидуальная программа обучения Python</p>
+    </header>
+
+    <main class="topics-container">
+
+        <div class="section-divider">— Основы —</div>
+
+        <a href="#" class="topic-item">
+            <div class="topic-number">01</div>
+            <div class="topic-info">
+                <div class="topic-name">Введение в Python</div>
+                <div class="topic-desc">Установка, первая программа, синтаксис</div>
+            </div>
+            <span class="topic-arrow">→</span>
+        </a>
+
+        <a href="#" class="topic-item">
+            <div class="topic-number">02</div>
+            <div class="topic-info">
+                <div class="topic-name">Переменные и типы данных</div>
+                <div class="topic-desc">int, float, str, bool, приведение типов</div>
+            </div>
+            <span class="topic-arrow">→</span>
+        </a>
+
+        <a href="#" class="topic-item">
+            <div class="topic-number">03</div>
+            <div class="topic-info">
+                <div class="topic-name">Условия и ветвления</div>
+                <div class="topic-desc">if, elif, else, логические операторы</div>
+            </div>
+            <span class="topic-arrow">→</span>
+        </a>
+
+        <a href="#" class="topic-item">
+            <div class="topic-number">04</div>
+            <div class="topic-info">
+                <div class="topic-name">Циклы</div>
+                <div class="topic-desc">for, while, break, continue, range</div>
+            </div>
+            <span class="topic-arrow">→</span>
+        </a>
+
+        <div class="section-divider">— Продвинутое —</div>
+
+        <a href="#" class="topic-item">
+            <div class="topic-number">05</div>
+            <div class="topic-info">
+                <div class="topic-name">Функции</div>
+                <div class="topic-desc">def, аргументы, return, lambda</div>
+            </div>
+            <span class="topic-arrow">→</span>
+        </a>
+
+        <a href="#" class="topic-item">
+            <div class="topic-number">06</div>
+            <div class="topic-info">
+                <div class="topic-name">Списки и словари</div>
+                <div class="topic-desc">list, dict, tuple, set, методы коллекций</div>
+            </div>
+            <span class="topic-arrow">→</span>
+        </a>
+
+        <a href="#" class="topic-item">
+            <div class="topic-number">07</div>
+            <div class="topic-info">
+                <div class="topic-name">Работа с файлами</div>
+                <div class="topic-desc">open, read, write, CSV, JSON</div>
+            </div>
+            <span class="topic-arrow">→</span>
+        </a>
+
+        <a href="#" class="topic-item">
+            <div class="topic-number">08</div>
+            <div class="topic-info">
+                <div class="topic-name">ООП — Объектно-ориентированное программирование</div>
+                <div class="topic-desc">Классы, объекты, наследование, инкапсуляция</div>
+            </div>
+            <span class="topic-arrow">→</span>
+        </a>
+
+        <a href="#" class="topic-item">
+            <div class="topic-number">09</div>
+            <div class="topic-info">
+                <div class="topic-name">Итоговый проект</div>
+                <div class="topic-desc">Создание полноценного приложения на Python</div>
+            </div>
+            <span class="topic-arrow">→</span>
+        </a>
+
+    </main>
+
+</body>
+</html>
