@@ -41,29 +41,20 @@
         }
 
         .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            font-size: 0.95rem;
-            padding: 8px 16px;
+            display: inline-flex; align-items: center; gap: 8px;
+            color: rgba(255,255,255,0.6); text-decoration: none;
+            font-size: 0.95rem; padding: 8px 16px;
             border-radius: 12px;
             background: rgba(255,255,255,0.05);
             border: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.3s ease;
-            margin-bottom: 24px;
+            transition: all 0.3s ease; margin-bottom: 24px;
         }
-        .back-link:hover {
-            background: rgba(255,255,255,0.1);
-            color: #fff;
-        }
+        .back-link:hover { background: rgba(255,255,255,0.1); color: #fff; }
 
         .page-icon { font-size: 2.5rem; display: block; margin-bottom: 12px; }
 
         .page-title {
-            font-size: 2.2rem;
-            font-weight: 800;
+            font-size: 2.2rem; font-weight: 800;
             background: linear-gradient(90deg, #00d2ff, #3a7bd5);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -72,32 +63,26 @@
 
         .page-subtitle {
             margin-top: 8px;
-            color: rgba(255,255,255,0.5);
-            font-size: 1rem;
+            color: rgba(255,255,255,0.5); font-size: 1rem;
         }
 
-        /* Список тем */
         .topics-container {
             position: relative; z-index: 1;
-            max-width: 800px;
-            margin: 30px auto;
+            max-width: 800px; margin: 30px auto;
             padding: 0 20px 60px;
         }
 
         .topic-item {
-            display: flex;
-            align-items: center;
-            gap: 16px;
+            display: flex; align-items: center; gap: 16px;
             background: rgba(255,255,255,0.05);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255,255,255,0.08);
             border-radius: 16px;
-            padding: 20px 24px;
-            margin-bottom: 12px;
-            text-decoration: none;
-            color: #fff;
+            padding: 20px 24px; margin-bottom: 12px;
+            text-decoration: none; color: #fff;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         .topic-item:hover {
@@ -108,47 +93,34 @@
         }
 
         .topic-number {
-            flex-shrink: 0;
-            width: 40px; height: 40px;
+            flex-shrink: 0; width: 40px; height: 40px;
             border-radius: 12px;
             background: linear-gradient(135deg, #00d2ff, #3a7bd5);
             display: flex; align-items: center; justify-content: center;
-            font-weight: 700;
-            font-size: 0.95rem;
+            font-weight: 700; font-size: 0.95rem;
         }
 
         .topic-info { flex: 1; }
-
-        .topic-name {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .topic-desc {
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.4);
-        }
+        .topic-name { font-size: 1.1rem; font-weight: 600; margin-bottom: 4px; }
+        .topic-desc { font-size: 0.85rem; color: rgba(255,255,255,0.4); }
 
         .topic-arrow {
-            font-size: 1.2rem;
-            color: rgba(255,255,255,0.3);
+            font-size: 1.2rem; color: rgba(255,255,255,0.3);
             transition: all 0.3s ease;
         }
+        .topic-item:hover .topic-arrow { color: #00d2ff; transform: translateX(4px); }
 
-        .topic-item:hover .topic-arrow {
-            color: #00d2ff;
-            transform: translateX(4px);
+        /* Иконка внешней ссылки */
+        .external-icon {
+            font-size: 0.75rem;
+            opacity: 0.5;
+            margin-left: 4px;
         }
 
-        /* Разделитель секций */
         .section-divider {
-            text-align: center;
-            margin: 30px 0 20px;
-            color: rgba(255,255,255,0.3);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            text-align: center; margin: 30px 0 20px;
+            color: rgba(255,255,255,0.3); font-size: 0.85rem;
+            text-transform: uppercase; letter-spacing: 2px;
         }
 
         @media (max-width: 768px) {
@@ -177,37 +149,38 @@
 
         <div class="section-divider">— Основы —</div>
 
-        <a href="#" class="topic-item">
+        <!-- ⬇️ ВСТАВЬТЕ СВОИ ССЫЛКИ В href ⬇️ -->
+        <a href="https://example.com/topic1" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">01</div>
             <div class="topic-info">
-                <div class="topic-name">Введение в Python</div>
+                <div class="topic-name">Введение в Python <span class="external-icon">↗</span></div>
                 <div class="topic-desc">Установка, первая программа, синтаксис</div>
             </div>
             <span class="topic-arrow">→</span>
         </a>
 
-        <a href="#" class="topic-item">
+        <a href="https://example.com/topic2" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">02</div>
             <div class="topic-info">
-                <div class="topic-name">Переменные и типы данных</div>
+                <div class="topic-name">Переменные и типы данных <span class="external-icon">↗</span></div>
                 <div class="topic-desc">int, float, str, bool, приведение типов</div>
             </div>
             <span class="topic-arrow">→</span>
         </a>
 
-        <a href="#" class="topic-item">
+        <a href="https://example.com/topic3" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">03</div>
             <div class="topic-info">
-                <div class="topic-name">Условия и ветвления</div>
+                <div class="topic-name">Условия и ветвления <span class="external-icon">↗</span></div>
                 <div class="topic-desc">if, elif, else, логические операторы</div>
             </div>
             <span class="topic-arrow">→</span>
         </a>
 
-        <a href="#" class="topic-item">
+        <a href="https://example.com/topic4" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">04</div>
             <div class="topic-info">
-                <div class="topic-name">Циклы</div>
+                <div class="topic-name">Циклы <span class="external-icon">↗</span></div>
                 <div class="topic-desc">for, while, break, continue, range</div>
             </div>
             <span class="topic-arrow">→</span>
@@ -215,46 +188,46 @@
 
         <div class="section-divider">— Продвинутое —</div>
 
-        <a href="#" class="topic-item">
+        <a href="https://example.com/topic5" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">05</div>
             <div class="topic-info">
-                <div class="topic-name">Функции</div>
+                <div class="topic-name">Функции <span class="external-icon">↗</span></div>
                 <div class="topic-desc">def, аргументы, return, lambda</div>
             </div>
             <span class="topic-arrow">→</span>
         </a>
 
-        <a href="https://liubov1900.github.io/spisok/" class="topic-item">
+        <a href="https://liubov1900.github.io/spisok/" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">06</div>
             <div class="topic-info">
-                <div class="topic-name">Списки и словари</div>
+                <div class="topic-name">Списки и словари <span class="external-icon">↗</span></div>
                 <div class="topic-desc">list, dict, tuple, set, методы коллекций</div>
             </div>
             <span class="topic-arrow">→</span>
         </a>
 
-        <a href="#" class="topic-item">
+        <a href="https://example.com/topic7" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">07</div>
             <div class="topic-info">
-                <div class="topic-name">Работа с файлами</div>
+                <div class="topic-name">Работа с файлами <span class="external-icon">↗</span></div>
                 <div class="topic-desc">open, read, write, CSV, JSON</div>
             </div>
             <span class="topic-arrow">→</span>
         </a>
 
-        <a href="#" class="topic-item">
+        <a href="https://example.com/topic8" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">08</div>
             <div class="topic-info">
-                <div class="topic-name">ООП — Объектно-ориентированное программирование</div>
+                <div class="topic-name">ООП <span class="external-icon">↗</span></div>
                 <div class="topic-desc">Классы, объекты, наследование, инкапсуляция</div>
             </div>
             <span class="topic-arrow">→</span>
         </a>
 
-        <a href="#" class="topic-item">
+        <a href="https://example.com/topic9" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">09</div>
             <div class="topic-info">
-                <div class="topic-name">Итоговый проект</div>
+                <div class="topic-name">Итоговый проект <span class="external-icon">↗</span></div>
                 <div class="topic-desc">Создание полноценного приложения на Python</div>
             </div>
             <span class="topic-arrow">→</span>
