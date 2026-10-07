@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фоксфорд — Python Обучение</title>
+    <title>Алгоритмика — Python Обучение</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -55,7 +55,7 @@
 
         .page-title {
             font-size: 2.2rem; font-weight: 800;
-            background: linear-gradient(90deg, #7b2ff7, #c471f5);
+            background: linear-gradient(90deg, #f857a6, #ff5858);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -87,15 +87,15 @@
 
         .topic-item:hover {
             background: rgba(255,255,255,0.1);
-            border-color: rgba(123, 47, 247, 0.3);
+            border-color: rgba(248, 87, 166, 0.3);
             transform: translateX(8px);
-            box-shadow: 0 8px 30px rgba(123, 47, 247, 0.1);
+            box-shadow: 0 8px 30px rgba(248, 87, 166, 0.1);
         }
 
         .topic-number {
             flex-shrink: 0; width: 40px; height: 40px;
             border-radius: 12px;
-            background: linear-gradient(135deg, #7b2ff7, #c471f5);
+            background: linear-gradient(135deg, #f857a6, #ff5858);
             display: flex; align-items: center; justify-content: center;
             font-weight: 700; font-size: 0.95rem;
         }
@@ -114,7 +114,7 @@
             font-size: 1.2rem; color: rgba(255,255,255,0.3);
             transition: all 0.3s ease;
         }
-        .topic-item:hover .topic-arrow { color: #c471f5; transform: translateX(4px); }
+        .topic-item:hover .topic-arrow { color: #f857a6; transform: translateX(4px); }
 
         .section-divider {
             text-align: center; margin: 30px 0 20px;
@@ -139,20 +139,20 @@
 
     <header>
         <a href="index.html" class="back-link">← Назад</a>
-        <span class="page-icon"></span>
-        <h1 class="page-title">Программа в «Фоксфорд»</h1>
-        <p class="page-subtitle">Курс Python от онлайн-школы Фоксфорд</p>
+        <span class="page-icon">🧩</span>
+        <h1 class="page-title">Программа «Алгоритмика»</h1>
+        <p class="page-subtitle">Структурированный курс программирования</p>
     </header>
 
     <main class="topics-container">
 
-        <div class="section-divider">— Базовый курс —</div>
+        <div class="section-divider">— Модуль 1: Знакомство —</div>
 
         <a href="https://example.com/topic1" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">01</div>
             <div class="topic-info">
-                <div class="topic-name">Основы синтаксиса Python <span class="external-icon">↗</span></div>
-                <div class="topic-desc">Интерпретатор, отступы, идентификаторы</div>
+                <div class="topic-name">Что такое программирование <span class="external-icon">↗</span></div>
+                <div class="topic-desc">Алгоритмы, языки программирования, среда разработки</div>
             </div>
             <span class="topic-arrow">→</span>
         </a>
@@ -160,8 +160,8 @@
         <a href="https://example.com/topic2" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">02</div>
             <div class="topic-info">
-                <div class="topic-name">Числа и арифметика <span class="external-icon">↗</span></div>
-                <div class="topic-desc">Операции, приоритет, математические функции</div>
+                <div class="topic-name">Первые шаги в Python <span class="external-icon">↗</span></div>
+                <div class="topic-desc">print(), комментарии, последовательность команд</div>
             </div>
             <span class="topic-arrow">→</span>
         </a>
@@ -169,37 +169,39 @@
         <a href="https://example.com/topic3" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">03</div>
             <div class="topic-info">
-                <div class="topic-name">Строки <span class="external-icon">↗</span></div>
-                <div class="topic-desc">Форматирование, срезы, методы строк</div>
+                <div class="topic-name">Переменные и данные <span class="external-icon"></span></div>
+                <div class="topic-desc">Хранение информации, типы данных, input()</div>
             </div>
             <span class="topic-arrow">→</span>
         </a>
+
+        <div class="section-divider">— Модуль 2: Логика —</div>
 
         <a href="https://example.com/topic4" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">04</div>
             <div class="topic-info">
-                <div class="topic-name">Условные операторы <span class="external-icon">↗</span></div>
-                <div class="topic-desc">if/elif/else, тернарный оператор</div>
+                <div class="topic-name">Условные конструкции <span class="external-icon"></span></div>
+                <div class="topic-desc">if/else, сравнения, булева логика</div>
             </div>
             <span class="topic-arrow">→</span>
         </a>
-
-        <div class="section-divider">— Средний курс —</div>
 
         <a href="https://example.com/topic5" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">05</div>
             <div class="topic-info">
-                <div class="topic-name">Циклы и итерации <span class="external-icon">↗</span></div>
-                <div class="topic-desc">for, while, enumerate, zip</div>
+                <div class="topic-name">Циклы и повторения <span class="external-icon">↗</span></div>
+                <div class="topic-desc">while, for, итерации, вложенные циклы</div>
             </div>
             <span class="topic-arrow">→</span>
         </a>
 
+        <div class="section-divider">— Модуль 3: Структуры данных —</div>
+
         <a href="https://example.com/topic6" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">06</div>
             <div class="topic-info">
-                <div class="topic-name">Коллекции данных <span class="external-icon">↗</span></div>
-                <div class="topic-desc">list, tuple, dict, set, comprehensions</div>
+                <div class="topic-name">Списки <span class="external-icon">↗</span></div>
+                <div class="topic-desc">Создание, индексация, срезы, методы списков</div>
             </div>
             <span class="topic-arrow">→</span>
         </a>
@@ -207,8 +209,8 @@
         <a href="https://example.com/topic7" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">07</div>
             <div class="topic-info">
-                <div class="topic-name">Функции и модули <span class="external-icon"></span></div>
-                <div class="topic-desc">def, *args, **kwargs, import, __name__</div>
+                <div class="topic-name">Функции <span class="external-icon">↗</span></div>
+                <div class="topic-desc">Создание функций, параметры, возвращаемые значения</div>
             </div>
             <span class="topic-arrow">→</span>
         </a>
@@ -216,19 +218,19 @@
         <a href="https://example.com/topic8" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">08</div>
             <div class="topic-info">
-                <div class="topic-name">Обработка ошибок <span class="external-icon">↗</span></div>
-                <div class="topic-desc">try/except, исключения, raise, finally</div>
+                <div class="topic-name">Словари и кортежи <span class="external-icon">↗</span></div>
+                <div class="topic-desc">dict, tuple, работа с парами ключ-значение</div>
             </div>
             <span class="topic-arrow">→</span>
         </a>
 
-        <div class="section-divider">— Продвинутый курс —</div>
+        <div class="section-divider">— Модуль 4: Проекты —</div>
 
         <a href="https://example.com/topic9" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">09</div>
             <div class="topic-info">
-                <div class="topic-name">ООП в Python <span class="external-icon"></span></div>
-                <div class="topic-desc">Классы, наследование, полиморфизм, magic methods</div>
+                <div class="topic-name">Работа с библиотеками <span class="external-icon"></span></div>
+                <div class="topic-desc">import, turtle, random, math</div>
             </div>
             <span class="topic-arrow">→</span>
         </a>
@@ -236,26 +238,8 @@
         <a href="https://example.com/topic10" class="topic-item" target="_blank" rel="noopener noreferrer">
             <div class="topic-number">10</div>
             <div class="topic-info">
-                <div class="topic-name">Файлы и сериализация <span class="external-icon">↗</span></div>
-                <div class="topic-desc">Работа с файлами, JSON, pickle, CSV</div>
-            </div>
-            <span class="topic-arrow">→</span>
-        </a>
-
-        <a href="https://example.com/topic11" class="topic-item" target="_blank" rel="noopener noreferrer">
-            <div class="topic-number">11</div>
-            <div class="topic-info">
-                <div class="topic-name">Декораторы и генераторы <span class="external-icon">↗</span></div>
-                <div class="topic-desc">@decorator, yield, итераторы</div>
-            </div>
-            <span class="topic-arrow">→</span>
-        </a>
-
-        <a href="https://example.com/topic12" class="topic-item" target="_blank" rel="noopener noreferrer">
-            <div class="topic-number">12</div>
-            <div class="topic-info">
-                <div class="topic-name">Итоговый проект <span class="external-icon">↗</span></div>
-                <div class="topic-desc">Разработка полноценного проекта с использованием всех тем</div>
+                <div class="topic-name">Финальный проект <span class="external-icon"></span></div>
+                <div class="topic-desc">Разработка игры или приложения</div>
             </div>
             <span class="topic-arrow">→</span>
         </a>
